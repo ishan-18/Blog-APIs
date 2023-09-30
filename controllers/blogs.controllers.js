@@ -23,7 +23,7 @@ exports.search_blogs = async (req, res) => {
     const { query } = req.query;
 
     if (!query) {
-        return res.status(400).json({ error: 'Query parameter is required' });
+        return res.status(ApiCode.QUERY_PARAM_MISSING.statusCode).json(createResponse({}, ApiCode.QUERY_PARAM_MISSING));
     }
 
     try {

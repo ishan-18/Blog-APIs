@@ -28,6 +28,12 @@ const ApiCode = {
         message: 'URL Not Found',
         statusCode: 404,
         apiCode: 'URL_NOT_FOUND'
+    },
+    QUERY_PARAM_MISSING: {
+        isError: true,
+        message: 'Query paramter is required to search blogs',
+        statusCode: 400,
+        apiCode: 'QUERY_PARAM_MISSING'
     }
 }
 
