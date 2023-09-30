@@ -22,7 +22,7 @@ app.use(cors())
 app.use(helmet())
 const limiter = rateLimit({
     windowMs: 10 * 60 * 1000, 
-    max: 5,
+    max: 100,
     message: (req,res,next) => {
         return res.status(ApiCode.RATE_LIMIT_EXCEEDED.statusCode).json(createResponse({}, ApiCode.RATE_LIMIT_EXCEEDED));
     },
